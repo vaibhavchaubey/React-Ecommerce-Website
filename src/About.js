@@ -9,6 +9,7 @@ const About = () => {
   return (
     <>
       {myName}
+      {/* hello */}
       <HeroSection myData={data} />;
     </>
   );
