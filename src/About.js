@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       {myName}
-      {/* hello */}
+      {/* hello hello*/}
       <HeroSection myData={data} />;
     </>
   );
