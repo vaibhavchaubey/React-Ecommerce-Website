@@ -53,7 +53,8 @@ const SingleProduct = () => {
           {/* product dAta  */}
           <div className="product-data">
             <h2>{name}</h2>
-            <Star stars={stars} reviews = {reviews}/>
+            <Star stars={stars} reviews={reviews} />
+
             <p className="product-data-price">
               MRP:
               <del>
@@ -99,7 +100,7 @@ const SingleProduct = () => {
               </p>
             </div>
             <hr />
-            {stock > 0 && <AddToCart product={singleProduct}/>}
+            {stock > 0 && <AddToCart product={singleProduct} />}
           </div>
         </div>
       </Container>
