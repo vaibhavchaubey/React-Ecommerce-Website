@@ -1,5 +1,5 @@
-import { createContext, useContext, useReducer } from "react";
-import reducer from "../reducer/cartReducer";
+import { createContext, useContext, useReducer } from 'react';
+import reducer from '../reducer/cartReducer';
 
 const CartContext = createContext();
 
@@ -17,14 +17,19 @@ const CartProvider = ({ children }) => {
     dispatch({ type: 'ADD_TO_CART', payload: { id, color, amount, product } });
   };
 
-  return <CartContext.Provider value={{...state, addToCart}}>{children}</CartContext.Provider>;
-};
-
-
-const useCartContext = () => {
-    return useContext(CartContext);
+  const removeItem = (id) => {
+    dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
+  return (
+    <CartContext.Provider value={{ ...state, addToCart, removeItem }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
 
-  
-  export { CartProvider, useCartContext };
+const useCartContext = () => {
+  return useContext(CartContext);
+};
+
+export { CartProvider, useCartContext };
