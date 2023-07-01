@@ -18,14 +18,14 @@ root.render(
     domain={domain}
     clientId={clientId}
 
-    authorizationParams={{
-      // redirect_uri: "window.location.origin"
-      redirect_uri: "http://localhost:3000"
-    }}
+    // authorizationParams={{
+    //   // redirect_uri: "window.location.origin"
+    //   redirect_uri: "http://localhost:3000"
+    // }}
 
     // OR
-    
-    // redirectURI= {window.location.origin}
+
+    redirectURI= {window.location.origin}
 
   >
     <AppProvider>
