@@ -18,15 +18,15 @@ root.render(
     domain={domain}
     clientId={clientId}
 
-    authorizationParams={{
-      // redirect_uri: "window.location.origin"
-      redirect_uri: "http://localhost:3000"
-      // redirect_uri: "thapa-store.vercel.app"
-    }}
+    // authorizationParams={{
+    //   // redirect_uri: "window.location.origin"
+    //   // redirect_uri: "http://localhost:3000"
+    //   // redirect_uri: "thapa-store.vercel.app"
+    // }}
 
     // OR
     
-    // redirectURI= {window.location.origin}
+    redirectUri= {window.location.origin}
 
   >
     <AppProvider>
